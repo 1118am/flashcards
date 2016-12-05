@@ -1,0 +1,45 @@
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.card-container {
+    perspective: 1000px;
+}
+
+/*.card-container:hover .card-flip {
+    transform: rotateY(180deg);
+}*/
+
+.flip {
+    transform: rotateY(180deg);
+}
+
+.card-container, .front, .back {
+    width: 300px;
+    height: 150px;
+    margin: 2em auto;
+}
+
+.card-flip {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+}
+
+.front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.front {
+    z-index: 2;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
